@@ -1,0 +1,874 @@
+ 
+#MainBody #MainList{
+	width:280px;
+	border-right:1px solid #d7d8dc; 
+	position:fixed;
+}
+
+#MainList{
+	background-color:#fff;
+}
+
+#MainList #SearchBar{
+	width:280px;
+	display:block;
+	background:#fff;
+	height:36px;
+	border-bottom:1px solid #eee; 
+	z-index:99;
+	overflow:hidden;
+}
+
+#MainList #SearchBar div{
+	float:left;
+	display:inline-block;
+}
+
+#MainList #SearchBar input[type=text]{
+	margin:2px 0;
+	border:0; 
+	background-color: transparent;
+	outline:none;
+	color:#ccc;
+	width:210px;
+	font-size:12px;
+	line-height:25px;
+	
+	height:30px; 
+}
+
+
+#MainList #SearchBar input[type=text]:focus{ 
+	color:#586bbf;
+}
+
+
+#MainList #SearchBar .button{ 
+	border:0; 
+	background-color: #fff;  
+	width:35px;
+	height:100%;
+	background-image: url(images/ic_search.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	display:block;
+	
+	border-left:1px solid #eee;
+	float:right;
+}
+
+
+
+#MainList #FuncBar{
+	width:280px;
+	display:block;
+	background:#f8f8f8; 
+	height:40px;
+	border-bottom:1px solid #eee; 
+	z-index:98;
+	color:#586bbf;  /*586bbf*/
+	overflow:hidden;
+	
+} 
+#MainList #FuncBar div{
+	display: inline-block;
+}
+
+#MainList #FuncBar .on{
+	background-color:#f5f7ff;
+	cursor:pointer;
+}
+
+#filter{
+	width:100px;
+}
+
+#sort{
+	width:120px;
+}
+
+
+
+#MainList #PatientList{ 
+	overflow-y:scroll;
+	min-height:290px;
+}
+#MainList #PatientList a {
+	display:block;
+	overflow:hidden;
+}
+
+#MainList #PatientList a ul{
+	border-bottom:1px solid #e6eaf8;
+	line-height:20px;
+	padding: 15px; 
+	display:block;
+} 
+
+#MainList #PatientList a:hover{
+	background-color:#f5f7ff;
+	cursor:pointer;
+}
+
+#MainList #PatientList .choosed{
+	background-color:#e5eaff;
+}
+
+
+#MainList #PatientList ul li{
+	display:block;
+	clear:both;
+	overflow:hidden;
+}
+
+#MainList #PatientList ul li div{
+	display:inline-block;
+	float:left; 
+	overflow:hidden;
+	white-space:nowrap; 
+	text-overflow:ellipsis; 
+	-moz-text-overflow: ellipsis; /* for Firefox,mozilla */ 
+}
+
+#MainList #PatientList ul li .name{
+	font-size:16px;
+	font-weight:bold;
+	width:160px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	margin-right:10px; 
+}
+
+
+#MainList #PatientList ul .gender{ 
+	text-align:center;
+	margin:0 10px;
+}
+
+
+#MainList #PatientList ul .order{ 
+	font-weight:bold;
+	color:#657ad4;
+	border:1px solid #7e96ff;
+	width:35px;
+	text-align:center; 
+	height:20px;
+	line-height:20px;
+	margin: 5px;
+	float:right; 
+	background-color: #fff;
+	border-radius:10px;
+	font-size:12px;
+} 
+
+#MainList #PatientList ul .type{
+	color:#586bbf;   
+	width:60px;
+	font-weight:bold;
+}
+
+#MainList #PatientList ul .time{
+	font-size:12px;
+	width:120px;
+}
+
+
+
+#PatienDetail{
+	min-width:480px;
+	max-width:700px;
+	position:fixed;
+	left:501px;
+	background-color:#fff;
+	border-right:1px solid #d7d8dc;
+	
+}
+
+#PatientInfo{ 
+	padding:15px; 
+}
+
+#PatientInfo li{
+	display:block;
+	clear:both;
+	overflow:hidden; 
+	vertical-align:bottom;
+	padding: 5px;
+}
+
+#PatientInfo span{
+	display:inline-block;
+	vertical-align:bottom;
+	margin-right:25px;
+	white-space:nowrap; 
+	text-overflow:ellipsis; 
+	-moz-text-overflow: ellipsis; /* for Firefox,mozilla */ 
+	overflow:hidden;	
+} 
+
+#PatientInfo .name{
+	font-size:20px;
+	font-weight:bold; 
+	width:180px;
+}
+ 
+ 
+ 
+#PatienDetail #PatientTab{
+	border-bottom:1px solid #d7d8dc;
+}
+
+
+
+#PatienDetail .main{
+	padding:10px 20px;
+	padding-top:0;
+	clear:both; 
+	
+	position: relative;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	min-height:200px;
+	
+	min-width:500px;
+	max-width: 660px;
+	background:#eef1f5;  /*f2f2f7*/
+}
+
+#PatienDetail .main .top{
+	margin-top:20px;
+	margin-bottom:5px;
+	line-height:40px;
+	clear:both;
+	overflow:hidden; 
+}
+
+#PatienDetail .main .icon{
+	background-repeat:no-repeat;
+	background-position:0% 50%;
+	padding-left:30px;
+}
+
+#PatienDetail .main .ic_exam{
+	background-image:url(images/ic_Rx_exam.png);
+}
+
+#PatienDetail .main .ic_check{
+	background-image:url(images/ic_Rx_check.png);
+}
+
+
+#PatienDetail .main .ic_drug{
+	background-image:url(images/ic_Rx_drug.png);
+}
+
+#PatienDetail .main .ic_treat{
+	background-image:url(images/ic_Rx_treat.png);
+}
+
+#PatienDetail .main .ic_diag{
+	background-image:url(images/ic_Rx_diagnosis.png);
+}
+
+#PatienDetail .main .ic_descb{
+	background-image:url(images/ic_Rx_descb2.png);
+}
+
+#PatienDetail .main .ic_history{
+	background-image:url(images/ic_Rx_history.png);
+}
+
+#PatienDetail .main ul li{
+	display:inline-block;
+	float:left; 
+	vertical-align:bottom;
+}
+
+#PatienDetail .main .title{ 
+	/*background-color:#f5f7ff;*/ 
+	font-size:18px; 
+	font-weight:normal;
+	margin-right:30px; 
+	
+}
+
+
+#PatienDetail .main .func{
+	color:#999; 
+	font-size:12px; 
+	font-weight:normal; 
+	padding:0 20px; 
+}
+
+ 
+
+#PatienDetail .main textarea{
+	width:100%;
+	height:120px; 
+}
+
+
+
+
+.ExpandAdd a{ 
+	text-align:center;
+	display: block; 
+	line-height:35px;  
+	color:#fff;
+	margin:10px 0;  
+	background-color:#657ad4; 
+	border-radius:3px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px;  
+}
+
+.ExpandAdd a:hover{
+	background-color:#8396e9;
+	cursor:hand; 
+}
+
+
+
+.ExpandList .detail .price{
+	color:#ff5050;
+	font-weight:bold;
+}
+
+.ExpandList .detail .totalprice{
+	width:80px;
+	color:#ff5050;
+	font-weight:bold;
+	font-size:14px;
+}
+
+
+.ExpandList .detail .result{
+	line-height:2em;
+	margin-top:10px;
+	border-top:1px dashed #eee;
+}  
+
+.ExpandList .detail .result table{
+	font-size:12px;
+	line-height:2em;
+	border:0;
+	overflow:hidden;
+	table-layout: fixed;
+	width:100%;
+	border-collapse:collapse;
+	border-bottom:1px solid #acb8ee;
+}
+
+ 
+
+.ExpandList .detail .result table td{
+	padding:0 5px;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis; /* for Firefox,mozilla */ 
+	overflow:hidden;
+	color:#333;
+}
+
+
+.ExpandList .detail .result table th{
+	margin:0;
+	padding:0 5px; 
+	text-align:left;
+	border-top:1px solid #acb8ee;
+	border-bottom:1px solid #acb8ee;
+	color:#657ad4;
+}
+ 
+
+.ExpandList .detail .result .more{
+	margin-top:5px;
+	padding: 0 10px;
+	color:#657ad4;
+	text-align:right;
+}
+
+.ExpandList .detail .result .more a{
+	margin-top:5px;
+	padding: 0 10px;
+	color:#657ad4;
+	text-align:right;
+	display:inline-block;
+} 
+.ExpandList .detail .result .more a:hover{
+	background-color:#eee!important;
+} 
+
+.ExpandList .detail .content div span .Highlight{
+	background-color:#faf0f0!important;
+	border:0;
+	color:#ff5050; 
+}
+
+.ExpandList .detail .content div span .Tips{
+	background-color:#faf0f0;
+	color:#ff5050; 
+	border:1px solid #ff5050;
+	width:80px;
+	line-height:20px;
+	position:absolute;
+	text-align:center;
+	margin-left:50px;
+	margin-top:-25px;
+	opacity:0.5;
+}
+
+
+.DynInput{
+	width:100%;
+	height:35px!important;
+	padding:0!important;
+	text-align:center;
+	
+} 
+
+
+#PatientExamin{
+	display:none;
+}
+
+#PriceList {
+	width:600px;
+	height:380px;
+	
+}
+
+#PriceList .list{
+	overflow-y:scroll;
+	height:270px;
+	padding:0 10px;
+}
+
+#PriceList table{
+	border-collapse:collapse;
+	
+}
+
+#PriceList table .subtitle{ 
+	line-height:20px;
+	font-size:14px;
+	margin:0;  
+	
+	border-bottom:1px solid #eee;
+	font-weight:bold;
+}
+
+#PriceList .TotalTitle{
+	line-height:25px;
+	font-size:14px;
+	margin:0; 
+	margin-top:10px;
+	font-weight:bold;
+	width:100%; 
+	background-color:#eee;
+}
+
+#PriceList .TotalTitle span{
+	display:inline-block;
+	padding:10px;
+	font-size:16px;
+}
+
+#PriceList .TotalTitle .label{
+	width:70%;
+}
+
+#PriceList .TotalTitle #CountTotalPrice{
+	width:20%;
+	color:#ff5050; 
+}
+
+#PriceList table{
+	width:100%;
+	font-size:12px;
+	line-height:20px;
+	table-layout:fixed;
+}
+
+#PriceList th{
+	text-align:left;
+	padding:5px;
+}
+
+#PriceList td{
+	text-align:left;
+	padding:5px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-moz-text-overflow:ellipsis;
+	white-space:nowrap
+}
+
+
+
+#ExamChooser {
+	width:520px;
+	height:380px;
+}
+
+#ExamChooser .confirm a{
+	width:120px;
+	line-height:30px;
+	height:30px;
+	position:absolute; 
+	color:#fff;
+	bottom:10px;
+	right:20px;
+	font-size:16px;
+	background-color:#657ad4; 
+	text-align:center;
+	border:0;
+	
+	border-radius:3px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px;  
+	display:inline-block;
+}
+
+
+#ExamChooser .confirm a:hover{
+	background-color:#8396e9; 
+	cursor:pointer;
+}
+
+
+#ExamChooser .search .list{
+	display:block;
+}
+
+#ExamChooser .content{
+	height:220px;
+}
+
+#ExamChooser .content .mainList{
+	width:200px;
+}
+
+
+#ExamChooser .content .subList{
+	width:300px;
+}
+#ExamChooser .content .subList span{
+	padding:0;
+}
+
+#ExamChooser .content .list{
+	display:inline-block;
+	float:left;
+	height:100%;
+	border:1px solid #ddd;
+	margin-left:5px;
+	overflow-y:scroll;
+}
+
+
+#ExamChooser .content .list h3{
+	margin:0;
+	font-size:14px; 
+	color:#333;
+}
+
+
+#ExamChooser .content .list h3 a{
+	padding:10px;
+	background-color:#fff;
+	border-bottom:1px solid #eee; 
+	background-position:95% 50%;
+	background-repeat:no-repeat;
+	display:block;
+}
+
+#ExamChooser .content .list h3 a:hover{
+	cursor:pointer;
+}
+
+#ExamChooser .content .list .down a{
+	background-image:url(images/ic_arr_down.png);
+}
+
+#ExamChooser .content .list .up a{
+	background-image:url(images/ic_arr_up.png);
+}
+
+
+#ExamChooser .content .list ul{
+	display:block;
+}
+
+#ExamChooser .content a{ 
+	padding:8px;
+	color:#333;
+	display:block; 
+}
+
+#ExamChooser .content a:hover{ 
+	background-color:#f5f7ff;
+	cursor:pointer;
+	color:#657ad4;
+}
+
+#ExamChooser .content .choosed a{ 
+	background-color:#e5eaff!important;
+	color:#657ad4!important;
+	cursor:default;
+}
+
+#ExamChooser .content .mainList{
+	background-color:#f5f7ff;
+}  
+
+
+#ExamChooser .content .subList .choosed a{
+	background-image:url(images/ic_choosed.png);
+	background-position:95% 50%;
+	background-repeat:no-repeat;
+}
+
+#ExamChooser .content .subList .disabled a{ 
+	background-color:#fff;
+	color:#ccc;
+	background-image:url(images/ic_choosed.png);
+	background-position:95% 50%;
+	background-repeat:no-repeat;
+}
+
+
+#ExamChooser .content .subList li{
+	text-overflow:ellipsis;
+	-moz-text-overflow: ellipsis; /* for Firefox,mozilla */ 
+	white-space:nowrap;
+	overflow:hidden;
+} 
+
+#ExamChooser .choosedArea{
+	margin-top:10px;
+	height:55px;
+	overflow:hidden;
+}
+#ExamChooser .choosedArea .item{
+	display:inline-block;
+	padding:0;
+	margin: 3px;
+	margin-left:0;
+	background-color:#fff;
+	color:#657ad4;
+	border:1px solid #657ad4;
+	
+	border-radius:3px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+}
+
+#ExamChooser .choosedArea .item div{
+	display:inline-block;
+	padding:5px;
+	overflow:hidden;
+	height:15px;
+}
+
+#ExamChooser .choosedArea .item .name{
+	max-width:120px;
+	text-overflow:ellipsis;
+	-moz-text-overflow: ellipsis; /* for Firefox,mozilla */ 
+	white-space:nowrap;
+	
+}
+
+#ExamChooser .choosedArea .del{
+	padding:5px 10px!important;
+	background-image:url(images/ic_del_2.png);
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+}
+#ExamChooser .choosedArea .del:hover{
+	background-color:#f5f7ff;
+}
+
+
+/*Patient Diagnose*/
+
+#PatientDiagnose{
+	display:none;
+}
+
+#diagnlist{
+	clear:both;
+	overflow:hidden;
+}
+#diagnlist span{
+	overflow:hidden;
+	text-overflow:ellipsis; 
+	-moz-text-overflow: ellipsis; /* for Firefox,mozilla */ 
+	white-space:nowrap
+}
+
+
+#diagnlist .code{
+	width:100px; 
+	
+}
+
+#diagnlist .name{
+	min-width:220px;
+	max-width:320px; 
+}
+
+
+#DiagChooser{
+	width:500px; 
+}
+
+
+/*Patient Prescribe*/
+
+#PatientPrescribe{
+	display:none;
+}
+
+
+#PatientPrescribe div{
+	overflow:hidden;
+	clear:both;
+	
+}
+
+#PatientPrescribe #druglist{
+	overflow:hidden;
+}
+
+
+#PatientPrescribe #druglist ul .price{
+	color:#ff5050;
+	font-weight:bold;
+}
+
+
+#DrugChooser {
+	width:720px;
+	height:400px;
+}
+#DrugChooser .list{
+	height:300px;
+} 
+
+#DrugChooser .list .price{
+	color:#ff5050;
+	font-weight:bold;
+}
+
+#TreatChooser {
+	width:620px;
+	height:400px;
+}
+
+#PatientSettle{
+	line-height:35px;
+	padding:10px;
+	background-color:#fff;
+	border-top:1px solid #d7d8dc;
+	border-right:1px solid #d7d8dc;
+	position:fixed;
+	z-index:100;
+	min-width:520px;
+	max-width: 680px;
+	
+}
+
+#PatientSettle div{
+	display:inline-block;
+}
+
+#PatientSettle span{
+	display:inline-block; 
+	padding:0 5px;
+}
+
+#PatientSettle .SumPrice{
+	width:65%; 
+	display:inline-block;
+	text-align:left;
+}
+
+#PatientSettle .SumPrice a{
+	text-align:left;
+	display:block;
+}
+
+#PatientSettle .SumPrice a:hover{
+	background-image:url(images/ic_arr_up.png);
+	background-color:#FFF;
+	background-repeat:no-repeat;
+	background-position:98% 50%;
+	cursor:pointer;
+}
+
+#PatientSettle .price{
+	color:#ff5050; 
+	font-size:16px;
+	font-weight:bold;
+} 
+ 
+
+#PatientSettle .BtnSubmit{
+	float:right;
+	width:30%;
+}
+
+#PatientSettle .BtnSubmit a{
+	width:100%;
+	color:#fff;
+	background-color:#ff5050;
+	font-size:16px;
+	text-align:center;
+	display:inline-block;
+	text-align:center;
+	border-radius:3px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px;
+}
+
+#PatientSettle .BtnSubmit a:hover{
+	background-color:#ff7171;
+	cursor:pointer;
+}
+
+#PriceDetail{
+	width:360px;
+	height:260px;
+	background-color:#fff;
+	position:relative; 
+	margin: auto;
+	top: 100px;
+	z-index:101;
+	padding:20px;
+	
+	box-shadow: 0 0 10px 3px rgba(0, 0, 0,0.1); 
+	-moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0,0.1);
+    -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0,0.1);
+	
+	border-radius:5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+
+
+#PriceDetail div{
+	line-height:20px;
+	padding: 5px 10px;
+}
+
+#PriceDetail .sub{
+	border-top:1px solid #ccc;
+	font-weight:bold;
+	line-height:25px;
+}
+
+#PriceDetail div span{
+	margin-right:20px;
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<head> 
+<script type="text/javascript" src = "script/CommonUtil.js"></script>
+
+<style type="text/css">
+	.title{
+		font-weight:bold;
+		color:#ff0000;
+	} 
+	.title_2{
+		border-bottom:1px solid #000;
+	}
+</style>
+
+<script>
+	window.onload =function(){
+		var elem = document.getElementById("test"); 
+		var expandBtn = document.createElement("a");
+		elem.appendChild(expandBtn);
+		
+		ClassUtil.add(expandBtn,"slide");
+		console.log("has slide_down: "+ ClassUtil.has(expandBtn,"slide_down"));
+		ClassUtil.add(expandBtn,"slide_down");
+		console.log("has slide: "+ ClassUtil.has(expandBtn,"slide"));
+		console.log("----------");
+	
+		//ClassUtil.add(elem,"title"); 
+		
+		ClassUtil.add(elem,"slide");
+		ClassUtil.add(elem,"slide_down"); 
+		console.log(ClassUtil.has(elem,"slide_down"));
+		
+		ClassUtil.remove(elem,"slide_down");
+		console.log(ClassUtil.has(elem,"slide_down"));
+		
+		ClassUtil.add(elem,"slide_down"); 
+		console.log(ClassUtil.has(elem,"slide_down"));
+		
+		//style 
+		StyleUtil.set(elem,"background-color","#000");
+		StyleUtil.set(elem,"background-color","#999");
+		StyleUtil.set(elem,"color","#999");
+		StyleUtil.set(elem,"color","#fff");  
+		
+		//console.log(elem.style.cssText);
+		
+	}
+	
+</script>
+
+</head>
+
+<body>
+	<div id="test" > hello </div>
+</body>
+
+
+<script type="text/javascript">
+	/*
+	
+	function Collection(){
+		this.elements = new Array();
+		
+		
+		Collection.prototype.size = function(){
+			return this.elements.length;
+		}
+		
+		
+		Collection.prototype.has = function(key){
+			for(var i=0;i< this.elements.length;i++){
+				if(this.elements[i].key == key){
+					return true;
+				} 
+			}
+			return false;
+		}
+		
+		Collection.prototype.delete = function(key){
+			for(var i=0;i< this.elements.length;i++){
+				if(this.elements[i].key == key){
+					this.elements.splice(i,1);
+					return true;
+				} 
+			}
+			return false;
+		}
+		
+		
+		Collection.prototype.set = function(key,value){
+			if(this.has(key)){
+				return false
+			}else{
+				this.elements.push({
+					key:key,
+					value:value
+				});
+				
+				return true;
+			}
+		}
+		
+		Collection.prototype.get = function(key){
+			for(var i=0;i< this.elements.length;i++){
+				if(this.elements[i].key == key){
+					return this.elements[i].value;
+				} 
+			}
+			return null;
+		}
+		
+		Collection.prototype.item = function(no){
+			if(no < this.elements.length){
+				return this.elements[no].value; 
+			}else{
+				return null;
+			} 
+		}
+		
+		Collection.prototype.clear = function(){
+			while(this.elements.length()>0){
+				this.elements.shift(); 
+			}
+			
+		}
+		
+	}
+	function MyMap(){
+		this.elements = new Array();
+		
+		
+		MyMap.prototype.size = function(){
+			return this.elements.length;
+		}
+		
+		
+		MyMap.prototype.has = function(key){
+			for(var i=0;i< this.elements.length;i++){
+				if(this.elements[i].key == key){
+					return true;
+				} 
+			}
+			return false;
+		}
+		
+		MyMap.prototype.delete = function(key){
+			for(var i=0;i< this.elements.length;i++){
+				if(this.elements[i].key == key){
+					this.elements.splice(1,1);
+					this.elements.forEach(function(item,index){
+						console.log(index + ":" + item);
+					});
+	
+					return true;
+				} 
+			}
+			return false;
+		}
+		
+		
+		MyMap.prototype.set = function(key,value){
+			if(this.has(key)){
+				return false
+			}else{
+				this.elements.push({
+					key:key,
+					value:value
+				});
+				
+				return true;
+			}
+		}
+		
+		MyMap.prototype.get = function(key){
+			for(var i=0;i< this.elements.length;i++){
+				if(this.elements[i].key == key){
+					return this.elements[i];
+				} 
+			}
+			return null;
+		}
+		
+		MyMap.prototype.item = function(no){
+			if(no < this.elements.length){
+				return this.elements[no]; 
+			}else{
+				return null;
+			} 
+		} 
+		
+		MyMap.prototype.__iterator__ = function(){
+		  return new MapIterator(this.elements);
+		};
+	}
+	 
+	
+		
+	function MapIterator(elements){
+		this.list = elements;
+		this.current = 0;
+		
+		MapIterator.prototype.next = function(){
+			if (this.current > this.list.size()-1){
+				throw StopIteration;
+			}else{
+				return this.list[current++];
+			}
+		}
+	}
+	
+	
+	var oCol = new Collection();
+	oCol.set("a","AAA");
+	oCol.set("b","BBB");
+	oCol.set("c","CCC");
+	oCol.set("d","DDD");
+	
+	for(var i = 0; i< oCol.size();i++){
+		console.log(oCol.item(i));
+	}
+	console.log(" ---------clear----------")
+	oCol.clear();
+	
+	for(var i = 0; i< oCol.size();i++){
+		console.log(oCol.item(i));
+	}
+	
+	/*
+
+	var oMap = new MyMap();
+	oMap.set("aa","apple");
+	oMap.set("bb","banana");
+	oMap.set("cc","coco");
+	console.log(oMap);
+	
+	for(var i = 0; i < oMap.size();i++){
+		console.log(oMap.item(i).key + ":" + oMap.item(i).value);
+	}
+	
+	console.log("------"); 
+	console.log(oMap.elements);
+	for(var it of oMap.elements){
+		console.log(it.key);
+	}
+	
+	var oArray = new Array();
+	oArray.push("A");
+	oArray.push("B");
+	oArray.push("C");
+	oArray.push("D");
+	
+	oArray.forEach(function(item,index){
+		console.log(index + ":" + item);
+	});
+	
+	console.log("--------");
+	var delItem = oArray.splice(1,1);
+	//delItem = delItem.splice(1);
+	//var newArr = oArray.concat(delItem);
+	
+	oArray.forEach(function(item,index){
+		console.log(index + ":" + item);
+	});
+	
+	
+	var oMap = new Map();
+	oMap.set("1","A");
+	oMap.set("2","B");
+	oMap.set("3","C");
+	
+	oMap.forEach(function(key,value){
+		console.log(key +":" + value);
+	});
+	
+	
+	for(let it of oMap.values()){
+		console.log(it);
+	}
+	*/
+</script>
+</html>

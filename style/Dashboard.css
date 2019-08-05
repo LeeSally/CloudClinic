@@ -1,0 +1,42 @@
+
+
+#MainBody canvas{
+	position:absolute;
+}
+
+#MainBody #ChartVisitors{
+	width:720px;
+	height:300px;
+	display:block;
+	padding:10px;
+	margin:10px;
+	
+}
+
+#MainBody #ChartVisitors .errInfo{
+	text-align:center;
+	display:block;
+	line-height:30px; 
+	padding:50px;
+	height:200px;
+	background-color:#f8f8f8;
+	color:#999; 
+}
+
+#MainBody #TopBar{
+	display:block;
+	clear:both;
+	overflow:hidden;
+	border-bottom:1px solid #eef1f5;
+}
+
+#ChartToggle{
+	margin-right:240px;
+}
+
+#MainBody #TopBar div{
+	display:inline-block;
+	float:left;
+}
+
+

@@ -1,0 +1,733 @@
+
+/* ****************************
+	general style
+**************************** */
+
+input[type=text]{
+	outline:none;
+	border:1px solid #d7d8dc;
+	
+	background-color:#fff;
+	padding:5px 10px;
+	height:30px;
+	font-size:12px;
+	
+	border-radius:3px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px;
+}
+
+
+textarea{
+	border:0;
+	font-family:calibri Tahoma Arial;
+	padding:0;
+	outline:none;
+}
+
+
+.TextInputArea{
+	border:1px solid #d7d8dc;
+	background:#fff;
+	border-radius:3px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px;
+	padding:5px;
+	margin-bottom:10px;
+	
+}
+.TextInputArea_focus{
+	border:1px solid #657ad4;
+	background:#fff;
+}
+
+/*  ****************************
+	common controls
+ ********************* */
+
+/* ---------------
+	TabBar 
+*/
+
+.TabBar{
+	width: 100%;
+	overflow:hidden;
+	clear:both; 
+	line-height:40px;
+}
+
+.TabBar li{
+	float:left;
+	display:inline;
+}
+
+.TabBar li a{
+	min-width: 10px; 
+	display:inline-block;
+	text-align:center; 
+	margin:0 5px;
+	padding:0 15px;
+	
+	font-size:14px;
+	color:#ccc; 
+	border-bottom:2px solid #fff;
+}
+
+.TabBar li a:hover{
+	color:#657ad4;
+	cursor:pointer;
+	border-bottom:2px solid #f5f7ff;
+}
+
+
+.TabBar .choosed{
+	color:#657ad4!important;
+	cursor:default!important;
+	border-bottom:2px solid #657ad4!important;
+}
+
+
+
+/* ---------------
+	DropButton 
+*/
+
+.DropButton .button a{
+	float:left;
+	display:inline-block; 
+	line-height:30px;
+	padding:5px 10px; 
+	background-image:url(images/ic_arr_down.png);
+	background-repeat:no-repeat;
+	background-position: 95% 50%;
+	border-right:1px solid #e0e4f5;
+	font-size:14px;
+}
+
+.DropButton .button a:hover{
+	cursor:pointer; 
+	background-color:#f5f7ff;
+}
+
+
+.DropButton .button .up{
+	background-image:url(images/ic_arr_up.png);
+}
+
+
+/* ---------------
+	MenuList 
+*/
+
+.MenuList{
+	line-height:18px;
+	border:1px solid #e6eaf8;
+	position:absolute; 
+	min-width:85px;
+	background:#fff;
+	color:#586bbf;
+	display:none;
+	
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0,0.05); /*#f5f7ff*/
+	-moz-box-shadow: 0 0 5px 1px rgba(0, 0, 0,0.05);
+    -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0,0.05);
+	
+	border-radius:3px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px;  
+}
+
+.MenuList li a{
+	padding:8px 15px;
+	display:block;
+}
+
+.MenuList li a:hover{
+	background-color:#f5f7ff!important;
+	cursor:pointer;
+}
+
+/* ---------------
+	ScrollBar 
+*/
+
+.ScrollBar{
+	width:5px!important;
+	position:absolute!important;
+	background-color:#eee;
+	z-index:100;
+	opacity:0;
+	margin-left:0!important;
+	border:0!important;
+	padding:0!important;
+	overflow:hidden!important;
+}
+
+.ScrollBar .bar{
+	width:5px!important; 
+	background-color:#999; 
+	position:absolute!important;
+	margin-left:0!important;
+	border:0!important;
+	padding:0!important;
+	overflow:hidden!important;
+	
+	border-radius:5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+
+
+/* ---------------
+	DatePicker 
+*/
+
+.DatePicker{
+	background-color:#f5f7ff;
+	border:1px solid #d7d8dc; 
+	
+	border-radius:5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	margin:5px;
+}
+
+.DatePicker span{ 
+	display:inline-block;
+	float:left; 
+}
+
+.DatePicker .DateBox a{
+	line-height:25px;
+	display:inline-block;
+}
+
+.DatePicker .DateBox a:hover{
+	cursor:pointer;
+	background-color:#e5eaff;
+}
+
+.DatePicker .DateInput{
+	width:75px; 
+	color:#657ad4; 
+	text-align:center;
+}
+
+.DatePicker .Button a{
+	color:#657ad4;
+	padding:3px 8px;
+	display:inline-block;
+	text-align:center;
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	height:20px;
+	width:8px;
+}
+
+.DatePicker .Button a:hover{
+	cursor:pointer;
+	background-color:#e5eaff;
+}
+
+
+.DatePicker .pre{ 
+	background-image:url(images/ic_arr_prev.png);
+}
+
+.DatePicker .next{
+	background-image:url(images/ic_arr_next.png);
+}
+
+
+
+/* ---------------
+	ItemList 
+*/
+
+.ItemList ul{
+	margin-bottom:8px;
+	border: 1px solid #d7d8dc;
+	overflow:hidden;
+	
+	border-radius:3px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	background-color:#fff;
+	
+	font-size:14px;
+}
+
+.ItemList li{
+	display:inline-block;
+	line-height:40px;
+	height:40px;  
+	float:left;
+	padding:0 10px;
+	
+	max-width:85%;
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+	-moz-text-overflow: ellipsis; /* for Firefox,mozilla */ 	
+	overflow:hidden;	
+}
+
+.ItemList .slide{
+	color:#657ad4;
+	width:25px;
+	height:25px; 
+	margin:7px;
+	float:left;
+	display:inline-block;
+	text-align:center;
+	float:right;
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	
+	border-radius:2px;
+	-moz-border-radius: 2px; 
+	-webkit-border-radius: 2px;  
+} 
+
+.ItemList .slide_down{
+	background-image:url(images/ic_arr_down.png);
+} 
+
+.ItemList .slide_up{
+	background-image:url(images/ic_arr_up.png);
+} 
+
+.ItemList .del{
+	width:25px;
+	height:26px; 
+	border:0; 
+	margin:6px 5px;
+	padding:0;
+	background-image:url(images/ic_del_2.png);
+	background-position:40% 50%;
+	background-repeat:no-repeat;
+	float:right;
+}
+
+
+
+
+/* ---------------
+	ExpandList 
+*/
+
+.ExpandList .detail{
+	background-color:#fff;
+	border:1px solid #d7d8dc; 
+	
+	clear:both;
+	overflow:hidden;
+	min-width:490px;
+	margin-bottom:8px; 
+	font-size:12px;
+	
+	border-radius:3px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px;
+	
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0,0.05); /*#f5f7ff*/
+	-moz-box-shadow: 0 0 5px 1px rgba(0, 0, 0,0.05);
+    -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0,0.05);
+}
+
+.ExpandList .detail .name{
+	padding:0 10px;
+	max-width:85%;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	
+	font-size:14px; 
+	display:inline-block;
+	font-weight:bold;
+	float:left;
+	height:40px;
+	line-height:40px;
+	
+}
+
+
+.ExpandList .detail .bar{ 
+	overflow:hidden;
+	border-bottom:1px solid #eee; 
+	color:#333;
+}
+
+.ExpandList .detail .content{
+	padding:10px;
+	line-height:25px;
+} 
+
+.ExpandList .detail .content div span{
+	display:inline-block;
+	margin-right:30px;
+	line-height:30px;
+	
+	overflow:hidden;
+	white-space:pre-wrap;
+	text-overflow:ellipsis;
+}
+
+
+.ExpandList .detail .content div .label{
+	color:#999;
+	margin-right:10px!important;
+}
+
+.ExpandList .detail .content div span input[type=text]{
+	padding:1px; 
+	height:20px;
+	background-color:#f7f7f9;
+}
+
+.ExpandList .detail .remove{
+	display:inline-block;
+	float:right;
+	margin-right:0;
+}
+.ExpandList .detail .remove a{ 
+	width:20px;
+	padding:3px;
+	text-align:center;
+	display:inline-block;
+	color:#657ad4;  
+	border:0px solid #acb8ee; 
+	height:16px;
+	background-image:url("images/ic_delete.png");
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+}
+
+.ExpandList a:hover{
+	cursor:pointer;
+} 
+
+
+
+/* ---------------
+	Chooser 
+*/
+
+.Chooser{
+	width:500px;
+	height:400px;
+	position:relative;
+	background-color:#fff;
+	z-index:101;
+	margin:auto; 
+	top:50px;
+	padding:15px;
+	display:none;
+	
+	box-shadow: 0 0 10px 3px rgba(0, 0, 0,0.1); 
+	-moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0,0.1);
+    -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0,0.1);
+	
+	border-radius:5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+
+
+.Chooser .top{
+	clear:both;
+	display:block;
+	overflow:hidden;
+	margin:15px 5px;
+}
+
+.Chooser .top div{
+	display:inline-block;
+	float:left;
+}
+
+.Chooser .title{
+	font-size:20px;
+	font-weight:bold;
+	padding:0 10px;
+	border-left:2px solid #657ad4;
+	width:220px;
+}
+
+.Chooser .search {
+	margin-left:25px;
+	float:right!important;
+}
+
+.Chooser .search div{
+	display:inline-block;
+	float:left;
+}
+
+.Chooser .search .button a{ 
+	border:0; 
+	background-color: #fff;  
+	width:28px;
+	height:28px;
+	background-image: url(images/ic_search.png);
+	background-repeat:no-repeat;
+	background-position:50% 50%; 
+	display:block; 
+}
+.Chooser .search a:hover{
+	cursor:pointer; 
+	background-color: #eee;  
+}
+
+.Chooser .search input[type=text]{
+	padding:5px; 
+	margin:3px;
+	height:25px;
+	border:0;
+	border-bottom:1px solid #eee;
+}
+
+.Chooser .list{
+	height:300px;
+	overflow-y:scroll;
+}
+
+.Chooser .list li{
+	border-bottom:1px solid #eee;
+	line-height:20px; 
+}
+
+.Chooser .list .on{
+	background-color:#f5f7ff;  /*e5eaff  f5f7ff*/
+	color:#586bbf;
+}
+
+
+.Chooser .list .disabled{ 
+	background-color:#fff;
+	color:#ccc;
+	background-image:url(images/ic_choosed.png);
+	background-position:97% 50%;
+	background-repeat:no-repeat;
+}
+
+.Chooser .list li span{
+	display:inline-block;
+	padding:5px;
+	overflow: hidden;
+	
+	text-overflow:ellipsis; 
+	-moz-text-overflow: ellipsis; /* for Firefox,mozilla */ 
+	white-space:nowrap
+}
+
+
+
+.Chooser .pageArea{
+	height:30px;
+	margin-top:10px;
+}
+.Chooser .pageArea ul li{
+	display:inline-block;
+	margin:0 5px;
+}
+
+.Chooser .pageArea .pagebtn a{
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	width:25px;
+	height:25px; 
+	display:inline-block;
+}
+.Chooser .pageArea .pagebtn a:hover{
+	background-color:#f5f7ff;
+	cursor:pointer;
+}
+
+.Chooser .pageArea .pagebox{
+	clear:both;
+	overflow:hidden;
+}
+
+.Chooser .pageArea .pagebox input{
+	width:65px;
+	height:22px;
+	padding:3px;
+	font-size:10px;
+	text-align:center;
+}
+.Chooser .pageArea .first{
+	background-image:url(images/ic_arr_first.png);
+}
+
+.Chooser .pageArea .last{
+	background-image:url(images/ic_arr_last.png);
+}
+
+.Chooser .pageArea .next{
+	background-image:url(images/ic_arr_next.png);
+}
+
+.Chooser .pageArea .prev{
+	background-image:url(images/ic_arr_prev.png);
+}
+
+
+.Chooser  .close a{
+	width:25px;
+	height:25px;
+	line-height:25px;
+	position:absolute; 
+	color:#fff!important;
+	top:-15px;
+	right:-15px;
+	background-color:#666; 
+	text-align:center;
+	border:2px solid #fff;
+	
+	border-radius:25px;
+	-moz-border-radius: 25px; 
+	-webkit-border-radius: 25px;  
+	opacity:0.6;
+}
+
+
+.Chooser .close a:hover{ 
+	opacity:0.8;
+	cursor:pointer;
+}
+
+
+/* ---------------
+	Dialog 
+*/
+
+.MaskBack {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#000;
+	opacity:0.4;
+	z-index:100;
+	display:none;
+}
+
+
+.MaskBack:hover {
+	cursor:pointer; 
+}
+
+
+
+.DialogBody{
+	background:#fff;
+	color:#333;
+	width:400px;
+	z-index:101;
+	display:none;
+	
+	position:relative;
+	margin: 30px auto;
+	
+	border-radius:3px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px;  
+	
+	box-shadow: 0 0 10px 3px rgba(0, 0, 0,0.1); 
+	-moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0,0.1);
+    -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0,0.1);
+}
+
+.DialogBody .title{  
+	padding:10px;
+	font-size:18px;
+	height:30px;
+	line-height:30px;
+	margin:0 5px;
+	overflow:hidden;
+	border-bottom:1px solid #eee; 
+	white-space:pre-wrap; 
+}
+
+
+.DialogBody .description{
+	padding:15px;
+	max-height:50px;
+	overflow:hidden;
+	font-size:14px;
+}
+
+
+.DialogBody .FucButtonArea{
+	height:40px;   
+	text-align:right;
+	padding:0 10px;
+} 
+
+.DialogBody .FucButtonArea a{
+	border:0; 
+	padding:0;
+	display:inline-block;
+	text-align:center;
+	background-color:#586bbf;
+	color:#fff; 
+	font-size:12px;
+	
+	min-width:90px;
+	height:30px;
+	line-height:30px;
+	font-weight:bold;
+	margin: 5px 2px;
+}
+
+.DialogBody .FucButtonArea a:hover{
+	background-color:#5d73d1!important;
+	cursor:pointer;
+}
+
+.DialogBody .FucButtonArea input[type="button"]{
+	border:0; 
+	padding:0;
+	
+	background-color:#586bbf;
+	color:#fff; 
+	font-size:12px;
+	
+	min-width:90px;
+	height:30px;
+	line-height:30px;
+	font-weight:bold;
+	margin: 5px 2px; 
+	outline:none;
+} 
+  
+.DialogBody .FucButtonArea .on{
+	background-color:#5d73d1!important;
+	cursor:pointer;
+}
+
+.DialogBody .close a{
+	width:20px;
+	height:20px;
+	line-height:20px;
+	position:absolute; 
+	color:#fff!important;
+	top:-15px;
+	right:-15px;
+	background-color:#666; 
+	text-align:center;
+	border:2px solid #fff;
+	
+	border-radius:25px;
+	-moz-border-radius: 25px; 
+	-webkit-border-radius: 25px;  
+	opacity:0.6;
+}
+
+.DialogBody .close a:hover{
+	opacity:0.8;
+	cursor:pointer;
+}
+ 
